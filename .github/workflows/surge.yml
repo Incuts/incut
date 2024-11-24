@@ -21,7 +21,7 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Build React
+    - name: Build Next
       run: ASSET_PREFIX="/" npm run build
 
     - name: Deploy to incut.surge.sh
