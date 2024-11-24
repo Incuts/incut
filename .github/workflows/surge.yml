@@ -1,0 +1,33 @@
+name: Deploy Static to Surge
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-static:
+    name: Deploy React to Surge.sh
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js 20
+      uses: actions/setup-node@v1
+      with:
+        node-version: 20
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build React
+      run: npm run build
+
+    - name: Deploy to mero-kotha.surge.sh
+      uses: dswistowski/surge-sh-action@v1
+      with:
+        domain: 'mero-kotha.surge.sh'
+        project: './dist/'
+        login: ${{ secrets.SURGE_EMAIL }}
+        token: ${{ secrets.SURGE_TOKEN }}
