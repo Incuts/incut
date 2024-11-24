@@ -22,12 +22,12 @@ jobs:
       run: npm install
 
     - name: Build React
-      run: npm run build
+      run: ASSET_PREFIX="/" npm run build
 
-    - name: Deploy to mero-kotha.surge.sh
+    - name: Deploy to incut.surge.sh
       uses: dswistowski/surge-sh-action@v1
       with:
-        domain: 'mero-kotha.surge.sh'
-        project: './dist/'
+        domain: 'incut.surge.sh'
+        project: './out/'
         login: ${{ secrets.SURGE_EMAIL }}
         token: ${{ secrets.SURGE_TOKEN }}
