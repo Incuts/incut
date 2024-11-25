@@ -1,5 +1,4 @@
 import React from "react";
-import { CarouselSection } from "../components";
 
 const page = () => {
   return (
