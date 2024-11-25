@@ -11,7 +11,7 @@ const page = () => {
       </p>
       <p className="text-2xl font-bold">Recent Videos from our team:</p>
       <div>
-        <CarouselSection />
+        {/* <CarouselSection /> */}
       </div>
     </div>
   );
