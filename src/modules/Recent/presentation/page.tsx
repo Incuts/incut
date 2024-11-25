@@ -1,4 +1,5 @@
 import React from "react";
+import { CarouselSection } from "../components";
 
 const page = () => {
   return (
@@ -9,6 +10,9 @@ const page = () => {
         creators and marketing teams.
       </p>
       <p className="text-2xl font-bold">Recent Videos from our team:</p>
+      <div>
+        {/* <CarouselSection /> */}
+      </div>
     </div>
   );
 };
