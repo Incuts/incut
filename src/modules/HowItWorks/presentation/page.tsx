@@ -6,7 +6,7 @@ import Kickoff from "@/core/assets/images/working3.png";
 const page = () => {
   return (
     <div className="px-5 flex flex-col justify-center items-center gap-10 mb-10 lg:mb-20 text-center">
-      <p className="text-3xl font-bold px-5">How Incuts Work</p>
+      <p className="text-3xl font-bold px-5">How Incut Work</p>
       <div className="flex flex-row justify-between gap-2">
         <div className="relative">
           <Image src={DiscoveryCall} alt="img" />
